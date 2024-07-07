@@ -1,0 +1,18 @@
+.navLink {
+    font-weight: 300;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: #0047AB;
+    text-decoration: underline;
+}
+
+
+.activeLink {
+    cursor: pointer;
+    font-weight: bolder;
+    color: #0047AB;
+    text-decoration: underline;
+}
