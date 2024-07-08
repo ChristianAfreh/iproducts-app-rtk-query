@@ -1,6 +1,7 @@
 import React from "react";
-import pic from "../../assets/photos/desk-concept-cyber-monday.jpg";
+import { MdOutlineStar } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
+import { BsCashCoin } from "react-icons/bs";
 import { getDiscountedPrice } from "../../app/utils/HelperFunctions";
 
 const ProductCard = ({
@@ -10,16 +11,19 @@ const ProductCard = ({
   discountPercentage,
   thumbnail,
 }) => {
-
-  var discountedAmount = getDiscountedPrice(discountPercentage,price);
+  var discountedAmount = getDiscountedPrice(discountPercentage, price);
   return (
     <div className="h-full px-2 mb-4">
       <div className="bg-[#dfdcdc85] h-1/2 mb-2 bg-opacity-50">
         <img src={thumbnail} className="h-full w-full" />
       </div>
       <div className="mb-2 font-semibold">{title}</div>
-      <div className="mb-2">{rating}</div>
-      <div className="text-[0.9rem] mb-2">
+      <div className="mb-2 flex flex-row items-center gap-1">
+      <MdOutlineStar  className="text-[1.2rem] text-yellow-400" />
+      <span>{rating}</span>
+      </div>
+      <div className="flex flex-row items-center gap-1 text-[0.99rem] mb-2">
+      <BsCashCoin />
         ${discountedAmount.toFixed(2)}
         <span className=" ml-2 text-[#5352527c] line-through text-">
           ${price}
