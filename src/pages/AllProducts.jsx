@@ -51,9 +51,6 @@ const AllProducts = () => {
               <button className="border-2 p-2 rounded-md text-lg active:bg-zinc-700 active:text-white">
                 <HiViewGrid />
               </button>
-              <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
-                ✨ You hover me!
-              </span>
             </div>
           </div>
         </div>
